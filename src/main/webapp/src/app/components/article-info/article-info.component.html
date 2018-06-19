@@ -1,0 +1,13 @@
+<button type="button" class="close" aria-label="Close" (click)="deleteArticleRequest(data)">
+  <span aria-hidden="true">&times;</span>
+</button>
+
+<a routerLink="/article/{{data.id}}" [queryParams]="{'mail':mail}">
+  <h1>{{data.title}}</h1>
+  <div class="d-flex flex-wrap">
+    <div *ngFor="let tag of data.tags">
+      <label class="label label-default">{{tag.name}}</label>
+    </div>
+  </div>
+  <br>
+</a>

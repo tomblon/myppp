@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-10">
+    <div class="d-flex flex-wrap" >
+      <div *ngFor="let tag of parseToTags()" >
+        <label class="label label-default">{{tag}}
+          <button type="button" class="close remove-tag" aria-label="Close" (click)="removeTag(tag)">
+            <span aria-hidden="true">x</span>
+          </button>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class='col-sm-2'>
+    <div class="input-group">
+      <input placeholder="Add tag" type="text" class="form-control" [(ngModel)]="tagToAdd">
+      <button type="button" class="btn btn-success" (click)="addTag()">+</button>
+    </div>
+  </div>
+</div>

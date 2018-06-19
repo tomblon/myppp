@@ -1,0 +1,40 @@
+@import "../../styles/_variables.scss";
+
+.registration-form-container {
+  width: 40%;
+  height: fit-content;
+  position: absolute;
+  border-radius: 5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blocky {
+  display: block;
+  width: 100%;
+  padding-bottom: 8%;
+}
+
+.registration-header {
+  margin-top: 0;
+  width: available;
+  padding: 15px 8px;
+  color:#fff;
+  text-align: center;
+  background-color: $orange-palette-base;
+  border-radius: 4px;
+}
+
+.registration-form-styled {
+  padding: 0 3% 3%;
+}
+
+.ng-valid[required]:not(.ng-pristine), .ng-valid.required:not(.ng-pristine) {
+  box-shadow: 1px 1px 1px 1px #42A948; /* green */
+}
+
+.ng-invalid:not(form):not(.ng-pristine) {
+  box-shadow: 1px 1px 1px 1px #a94442; /* red */
+
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="main-wrapper">
+    <div class="row">
+      <div class="col-md-12 m-auto m-0 text-center pb-5">
+        <h1>
+          Welcome to {{title}}
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="infobox" class="col-md-6">
+        <label id="info">All your favourite articles in one place.</label>
+        <img id="newspaper-img" src="assets/img/newspapers.jpg" alt="">
+      </div>
+
+      <div id="registrationbox" class="col-md-6">
+        <label class="question">Do you already have an account?</label>
+        <br><br/>
+        <button (click)="toLoginPage()" class="btn btn-primary w-50">Log in</button>
+        <br><br/>
+        <label class="question">You don't?</label>
+        <br><br/>
+        <button (click)="toRegistrationPage()" class="btn btn-primary w-50">Register</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+

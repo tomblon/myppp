@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.remove-tag {
+  font-size: 18px;
+  color: $white;
+  margin-left: 3px;
+}
+
+.input-group {
+  width: 150px;
+}
+
+.btn-success {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  padding: 4px 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+

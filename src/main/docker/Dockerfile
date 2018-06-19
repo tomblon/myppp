@@ -1,0 +1,6 @@
+FROM library/postgres
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD parostatki
+ENV POSTGRES_DB mypp
+
+EXPOSE 5432

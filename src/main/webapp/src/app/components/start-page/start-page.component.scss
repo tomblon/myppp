@@ -1,0 +1,64 @@
+.main-wrapper {
+  padding: 30px 15px;
+}
+
+img {
+  width: 100%;
+}
+
+#pocket-img {
+  max-width: 230px;
+}
+
+#newspaper-img {
+  max-width: 330px;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: darkslategray;
+}
+
+#infobox {
+  text-align: center;
+}
+
+#info {
+  font-size: 24px;
+  margin-top: 20px;
+  color: darkslategray;
+}
+
+#registrationbox {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.rbbutton {
+  margin-top: 10px;
+  max-width: 250px;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: lightslategray;
+  color: white;
+  cursor: pointer;
+}
+
+.rbbutton:hover {
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: lightgrey;
+  color: darkslategray;
+  border: 2px solid lightslategray;
+}
+
+.question {
+  margin-top: 20px;
+  display:inline-block;
+  font-size: 24px;
+  color: darkslategray;
+}

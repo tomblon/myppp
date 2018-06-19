@@ -1,0 +1,20 @@
+<div class="mypp-container container">
+  <h2>Add friend</h2>
+  <div class="line"></div>
+  <br>
+
+  <div class="col-md-6">
+    <h3>Add friend:</h3>
+    <form #f="ngForm">
+      <div class="form-group">
+        <label for="friend-name">Name</label>
+        <input id="friend-name" ngModel name="name" placeholder="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="friend-email">Email</label>
+        <input id="friend-email" ngModel [email]=true name="email" placeholder="email" class="form-control" required>
+      </div>
+    </form>
+    <button [disabled]="!f.valid" class="btn btn-primary" (click)="addFriendRequest(f)">Add friend</button>
+  </div>
+</div>

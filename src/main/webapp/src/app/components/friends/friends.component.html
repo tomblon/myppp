@@ -1,0 +1,31 @@
+<div class="mypp-container container">
+  <h2>Friends</h2>
+
+  <div class="line"></div>
+  <br>
+
+  <div class="row">
+    <div class="col-12">
+      <a class="btn btn-lg btn-primary" (click)="navigateToNewFriend()" style="color: white"> Add new friend</a>
+    </div>
+  </div>
+  <br>
+
+  <table class="table table-bordered table-hover">
+    <thead class="bg-success">
+    <tr>
+      <th *ngFor="let header of headers" style="color: white"> {{header}}</th>
+      <th style="color: white">send article</th>
+      <th style="color: white">delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let friend of friends | async">
+      <td *ngFor="let column of headers"> {{friend[column]}}</td>
+      <td><a class="btn btn-lg btn-primary" (click)="shareToFriend(friend)" style="color: white">Send article</a></td>
+      <td><a class="btn btn-lg btn-danger" (click)="deleteFriendRequest(friend)" style="color: white">&times;</a></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

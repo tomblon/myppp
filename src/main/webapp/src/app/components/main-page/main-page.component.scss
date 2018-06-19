@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+.card {
+  background-color: $orange-palette-base;
+  margin: 2px;
+}
+
+.card-body {
+  padding: 8px 8px;
+}
+
+#tiles-img, #list-img {
+  border-radius: 7px;
+  max-width: 40px;
+  margin: 10px;
+}
+
+.list-group {
+  padding-top: 10px;
+}
+
+.list-group-item {
+  background-color: $orange-palette-base;
+  margin: 2px;
+  padding: 6px 10px;
+}
+
+.d-flex {
+  margin-top: 10px;
+}
+

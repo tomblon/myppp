@@ -1,0 +1,61 @@
+<div class="mypp-container container">
+  <h2>My articles</h2>
+
+  <div class="line"></div>
+  <br>
+
+  <div class="row">
+    <div class='col-sm-2'>
+      <h5>Filter by title</h5>
+    </div>
+
+    <div class='col-sm-8'></div>
+    <div class='col-sm-2'>
+      <h4>View:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-10'>
+      <textarea type='text' class="form-control" placeholder="Filter by title" [(ngModel)]="titleFilter"></textarea>
+    </div>
+    <div class="col-sm-2">
+      <img id="tiles-img" (click)="setTilesView(true)" src="assets/img/tiles.png" alt="" title="Tiles view"
+           [ngStyle]="{'background-color': tilesView ? 'lawngreen' : ''}">
+      <img id="list-img" (click)="setTilesView(false)" src="assets/img/list.png" alt="" title="List view"
+           [ngStyle]="{'background-color': tilesView ? '' : 'lawngreen'}"></div>
+  </div>
+  <div class="row">
+    <div class='col-sm-2'>
+      <h5>Filter by tags</h5>
+    </div>
+
+    <div class='col-sm-8'></div>
+    <div class='col-sm-2'>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-10'>
+      <textarea type='text' class="form-control" placeholder="Filter by title" [(ngModel)]="tagsFilter"></textarea>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+  </div>
+
+  <div *ngIf="tilesView" class="d-flex flex-wrap">
+    <div *ngFor="let article of (articles | tagsFilter:tagsFilter | titleFilter:titleFilter)" class="card" style="width: 17rem;">
+      <div class="card-body">
+      <app-article-info [data]="article" [mail]="mail" (articlesChange)="getArticles()"></app-article-info>
+      </div>
+    </div>
+  </div>
+
+  <ul *ngIf="!tilesView" class="list-group">
+    <li *ngFor="let article of (articles | tagsFilter:tagsFilter | titleFilter:titleFilter)" class="list-group-item">
+      <app-article-info-listitem [data]="article" [mail]="mail" (articlesChange)="getArticles()"></app-article-info-listitem>
+    </li>
+  </ul>
+  </div>

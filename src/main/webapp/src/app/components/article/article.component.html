@@ -1,0 +1,10 @@
+<div class="mypp-container container">
+
+  <h1>{{article?.title}}</h1>
+  <a href="{{article?.url}}">Go to original article</a>
+  <hr>
+  <app-share-article [id]="id" [mail]="mail"></app-share-article>
+  <app-edit-article-form [tagsAsString]="tagNames" [id]="id"></app-edit-article-form>
+
+  <article class="mypp-article" [innerHtml]="article?.text"></article>
+</div>

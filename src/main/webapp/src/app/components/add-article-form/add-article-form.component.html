@@ -1,0 +1,38 @@
+<div class="mypp-container container">
+  <h2>Add article</h2>
+  <div class="line"></div>
+  <br>
+
+  <div class="col-md-6">
+    <h3>New article:</h3>
+    <form #f="ngForm">
+      <div class="form-group">
+        <label for="article-title">Title</label>
+        <input id="article-title" ngModel name="title" placeholder="title" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="article-url">Url</label>
+        <input id="article-url" ngModel name="url" placeholder="url" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="article-comment">Comment</label>
+        <input id="article-comment" ngModel name="comment" placeholder="comment" class="form-control">
+      </div>
+    </form>
+    <label>Tags</label>
+    <div class="input-group">
+      <input placeholder="Add tag" type="text" class="form-control" [(ngModel)]="tagToAdd">
+      <button type="button" class="btn btn-success" (click)="addTag()">+</button>
+    </div>
+    <div class="d-flex flex-wrap" >
+      <div *ngFor="let tag of parseToTags()" >
+        <label class="label label-default">{{tag}}
+          <button type="button" class="close remove-tag" aria-label="Close" (click)="removeTag(tag)">
+            <span aria-hidden="true">x</span>
+          </button>
+        </label>
+      </div>
+    </div>
+    <button [disabled]="!f.valid" class="btn btn-primary" (click)="addArticleRequest(f)">Add article</button>
+  </div>
+</div>

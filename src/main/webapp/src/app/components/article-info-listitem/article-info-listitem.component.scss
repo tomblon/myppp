@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.container {
+  margin: 0px;
+}
+
+h1{
+  color: $white;
+  font-size: 22px;
+  margin-right: 22px;
+}
+
+a:hover {
+  text-decoration: none;
+}

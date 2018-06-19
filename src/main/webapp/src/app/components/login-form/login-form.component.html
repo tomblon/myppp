@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="login-form-container">
+    <h1 class="login-header">Log in to My Private Pocket!</h1>
+    <form (ngSubmit)="postLogin()" class="login-form-styled" #loginForm="ngForm">
+      <div class="form-group"><input type="email" class="form-control" placeholder="Email" required
+                                     [(ngModel)]="model.userMail" name="email" #email="ngModel" ngModel [email]="true">
+
+      </div>
+
+      <div class="blocky"><input type="password" class="form-control" placeholder="Password" required
+                                 [(ngModel)]="model.password" minlength="8" maxlength="20" name="password"
+                                 #password="ngModel">
+
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">
+        Login
+      </button>
+      <button class="btn btn-secondary" (click)="back($event)">Back</button>
+    </form>
+  </div>
+</div>
+
+
+
